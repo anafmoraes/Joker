@@ -14,6 +14,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('frontend/template/html-header');
+		$this->load->view('frontend/template/header-admin');
 		$this->load->view('frontend/admin');
 		$this->load->view('frontend/template/footer');
 		$this->load->view('frontend/template/html-footer');
