@@ -131,17 +131,27 @@
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h1 class="section-heading">Conquistas do jogo</h1>
+				<p>O plano gamificado conta com duas conquistas ao final do jogo: <br> Um <strong>Certificado de distrição</strong>, que pode ser conquistado de forma individual<br> e um <strong>Happy Hour</strong>, que é conquistado de forma coletiva com o grupo de cada jogador.<br> Para usufluir da conquista, o jogador deve se atentar ao pré-requisito descrito à seguir.</p>
 				<hr class="primary">
 	        </div>
-	        <div class="col-md-6 col-sm-12">
-				<div class="about-des">
-					<p align="justify">Média Final >= 7.5 e Mestre em todos os ciclos: Certificado de distinção<br>
-					Os dois grupos que tiverem o melhor desempenho serão convidados para um Happy Hour, desde que nenhum dos participantes do grupo tenha média inferior a 60%</p>
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<img src="<?php echo base_url('/images/premio.png');?>" class="img-responsive" alt="premio">
-			</div>
+	        <div class="container">
+		        <div class="row">
+		          <div class="col-lg-6 text-center">
+		            <div class="service-box">
+		              <img src="<?php echo base_url('/images/premio1.png');?>">
+		              <h3>Certificado de distinção</h3>
+		              <p class="text-muted">Ter média Final maior ou igual à 7.5<br> Ser mestre em todos os ciclos do jogo</p>
+		            </div>
+		          </div>
+		          <div class="col-lg-6 text-center">
+		            <div class="service-box">
+		              <img src="<?php echo base_url('/images/premio2.png');?>">
+		              <h3>Happy Hour</h3>
+		              <p class="text-muted"> Para os dois grupos com melhor desempenho <br> Desde que todos os participantes tenham média maior ou igual à 60%</p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
 		</div>
 	</section>
 
