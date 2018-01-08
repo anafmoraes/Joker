@@ -274,16 +274,49 @@
 						<?php 
 	        			$id = $this->session->userdata('userlogado')->id;
 	        			$this->db->where('id_usuario', $id);
-				
 						$query = $this->db->get('nti_usuarios');
-						foreach ($query->result() as $row) {?> 
-							<?php echo $row->pontuacao; ?>
-							<h4> Saldo disponível para trocas: </h4>
-							<?php echo $row->saldo; 
-							if ($row->pontuacao >= '0') {?>
-								<b> <br><br> Você pode trocar seus pontos por 10 horas de folga!!!! </b>
+						foreach ($query->result() as $row) {?> <br><strong>
+							<?php echo "Pontuação do mês de ". $row->mes . ": ". $row->pontuacao;?>
+							<br></strong>
 							<?php
-							}							
+							if ($row->pontuacao >= '250'){
+								echo "Bonificação R$100 + 10h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '200') {
+								echo "Bonificação: R$90 + 9h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '150') {
+								echo "Bonificação: R$80 + 8h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '130') {
+								echo "Bonificação: R$70 + 7h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '120') {
+								echo "Bonificação: R$60 + 6h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '100') {
+								echo "Bonificação: R$40 + 5h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '85' and $row->quant_chamados >= '10') {
+								echo "Bonificação: R$30 + 4h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '75' and $row->quant_chamados >= '7') {
+								echo "Bonificação: R$30 + 3h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '65' and $row->quant_chamados >= '5') {
+								echo "Bonificação: R$20 + 2h de liberação";
+							}
+
+							elseif ($row->pontuacao >= '50' and $row->quant_chamados >= '3')
+								echo "Bonificação: R$20 + 1h de liberação";						
 						}?>
 					</p>
 				</div>
