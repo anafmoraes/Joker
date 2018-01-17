@@ -1,3 +1,4 @@
+
 <div class="container">
 	<section id="regrasJogo" class="paralla-section">
 		<div class="row">
@@ -161,10 +162,7 @@
 	    	    <h1 class="section-heading">Progresso dos jogadores</h1>
 	            <hr class="primary"><br><br>
 	        </div>
-	        <div class="col-md-6 col-sm-12">
-	        	<img src="<?php echo base_url('/images/progresso.png');?>" class="img-responsive" alt="about img 1">
-	        </div>
-	        <div class="col-md-6">
+	        <div>
 				<div class="about-des">
 					<p align="justify">
 						<b>Boas vindas ao sistema, <?php  echo $this->session->userdata('userlogado')->nome;?>. </b> Nesta sessão você encontra o seu progresso ao longo dos ciclos da <i>Gamificação</i>. Esperamos que goste do plano gamificado planejado para o seu ambiente colaborativo. Divirta-se e fique de olho no seu progresso =)
@@ -178,45 +176,44 @@
 						<h4>Ciclo 1 </h4> Total de moedas:
 						<?php echo $row->ciclo1; ?><br><?php
 						if ($row->ciclo1 >= '119') {
-							echo " Nível Mestre";
+							?><img src="<?php echo base_url('/images/nivel3.png');?>" width="800px" class="img-responsive" alt="Nível 3"><?php
 						} elseif ($row->ciclo1 >='105') {
-							echo "Nível 2";
+							?><img src="<?php echo base_url('/images/nivel2.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
 						}
 						elseif ($row->ciclo1 >= '84') {
-							echo "Nível 1";
+							?><img src="<?php echo base_url('/images/nivel1.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
 						} else{
 							echo "Nível 0";
 						}
-
 						?>
 
 						<h4>Ciclo 2 </h4> Total de moedas: 
-						<?php echo $row->ciclo2;?><br><?php
+						<?php echo $row->ciclo2; ?><br><?php
 						if ($row->ciclo2 >= '119') {
-							echo " Nível Mestre";
+							?><img src="<?php echo base_url('/images/nivel3.png');?>" width="800px" class="img-responsive" alt="Nível 3"><?php
 						} elseif ($row->ciclo2 >='105') {
-							echo "Nível 2";
+							?><img src="<?php echo base_url('/images/nivel2.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
 						}
 						elseif ($row->ciclo2 >= '84') {
-							echo "Nível 1";
+							?><img src="<?php echo base_url('/images/nivel1.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
 						} else{
 							echo "Nível 0";
 						}
 						?>
 
 						<h4>Ciclo 3 </h4> Total de moedas: 
-						<?php echo $row->ciclo3;?><br><?php
+						<?php echo $row->ciclo3; ?><br><?php
 						if ($row->ciclo3 >= '119') {
-							echo " Nível Mestre";
+							?><img src="<?php echo base_url('/images/nivel3.png');?>" width="800px" class="img-responsive" alt="Nível 3"><?php
 						} elseif ($row->ciclo3 >='105') {
-							echo "Nível 2";
+							?><img src="<?php echo base_url('/images/nivel2.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
 						}
 						elseif ($row->ciclo3 >= '84') {
-							echo "Nível 1";
+							?><img src="<?php echo base_url('/images/nivel1.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
 						} else{
 							echo "Nível 0";
 						}
-						}	
+						}
 						?>
 					</p>
 				</div>

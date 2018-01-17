@@ -6,7 +6,7 @@
 					<span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<a href="index.html" class="navbar-brand">Joker</a>
+				<a href="index.html" class="navbar-brand">Joker - NTI</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right main-navigation">
