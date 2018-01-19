@@ -10,10 +10,10 @@ class Usuarios extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('frontend/template/html-header');
-		$this->load->view('frontend/cadastro');
-		$this->load->view('frontend/template/footer');
-		$this->load->view('frontend/template/html-footer');
+		$this->load->view('frontend/template/Html-header');
+		$this->load->view('frontend/Cadastro');
+		$this->load->view('frontend/template/Footer');
+		$this->load->view('frontend/template/Html-footer');
 	}
 
 	public function inserir(){
@@ -22,7 +22,6 @@ class Usuarios extends CI_Controller {
 		$this->form_validation->set_rules('txt-email', 'Email', 'required|valid_email'); #email
 		$this->form_validation->set_rules('txt-senha', 'Senha', 'required|min_length[3]'); #senha
 		$this->form_validation->set_rules('txt-confir-senha', 'Confirmar senha', 'required|matches[txt-senha]'); #senha
-		$this->form_validation->set_rules('txt-projeto', 'Projeto', 'required|min_length[3]'); #projeto
 
 		if($this->form_validation->run() == FALSE){
 			$this->index();
@@ -30,14 +29,15 @@ class Usuarios extends CI_Controller {
 			$nome= $this->input->post('txt-nome');
 			$email= $this->input->post('txt-email');
 			$senha= $this->input->post('txt-senha');
-			$projeto= $this->input->post('txt-projeto');
+			$projeto= filter_input(INPUT_POST,"projeto",FILTER_SANITIZE_STRING);
+
 			$criptografia = base64_encode($senha);
 			if ($this->modelusuarios->adicionar($nome, $email, $projeto, $criptografia)) {
 				$id_usuario = $this->modelusuarios->recuperar_id($nome, $criptografia);
-				if ($projeto == "ed1") {
+				if ($projeto == "Estrutura de Dados I") {
 					$this->modelusuarios->preencher_ed1($id_usuario, 0, 0, 0);
 				}
-				//elseif ($projeto == "nti"){
+				//elseif ($projeto == "NTI - Microinformática"){
 				//	$this->modelusuarios->preencher_nti($id_usuario, 0, 0);
 				//}
 				redirect(base_url('login'));
@@ -49,23 +49,23 @@ class Usuarios extends CI_Controller {
 
 	public function excluir($id){
 		if ($this->usuarios_model->excluir($id)) {
-			redirect(base_url(home));
+			redirect(base_url('home'));
 		}else{
 			echo "Houve um erro no sistema!";
 		}
 	}
 
 	public function pag_cadastro(){
-		$this->load->view('frontend/template/html-header');
-		$this->load->view('frontend/cadastro');
-		$this->load->view('frontend/template/html-footer');
+		$this->load->view('frontend/template/Html-header');
+		$this->load->view('frontend/Cadastro');
+		$this->load->view('frontend/template/Html-footer');
 	}
 
 
 	public function pag_login(){
-		$this->load->view('frontend/template/html-header');
-		$this->load->view('frontend/login');
-		$this->load->view('frontend/template/html-footer');
+		$this->load->view('frontend/template/Html-header');
+		$this->load->view('frontend/Login');
+		$this->load->view('frontend/template/Html-footer');
 	}
 
 	public function login(){
@@ -88,13 +88,13 @@ class Usuarios extends CI_Controller {
 				$dadosSessao['logado'] = TRUE;
 				$this->session->set_userdata($dadosSessao);
 				
-				if($this->session->userdata('userlogado')->projeto == "ed1"){
+				if($this->session->userdata('userlogado')->projeto == "Estrutura de Dados I"){
 					redirect(base_url('ed1'));
 				} 
-				elseif ($this->session->userdata('userlogado')->projeto == "nti"){
+				elseif ($this->session->userdata('userlogado')->projeto == "NTI - Microinformática"){
 					redirect(base_url('nti'));
 				}
-				elseif($this->session->userdata('userlogado')->projeto == "admin"){
+				elseif($this->session->userdata('userlogado')->projeto == "Administrador"){
 					redirect(base_url('admin'));
 				}
 				else {

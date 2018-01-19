@@ -17,6 +17,7 @@
 						<li><a href="#ciclos" class="smoothScroll">CICLOS</a></li>
 						<li><a href="#conquistas" class="smoothScroll">CONQUISTAS</a></li>
 						<li><a href="#progresso" class="smoothScroll">PROGRESSO</a></li>
+						<li><a href="#loja" class="smoothScroll">LOJA</a></li>
 						<li><a href="<?php echo base_url('usuarios/logout')?>" class="smoothScroll">LOGOUT</a></li>
 
 					</ul>

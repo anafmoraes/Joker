@@ -21,8 +21,13 @@
 				</div>
 
 				<div class="form-group">
-					<input type="text" id="txt-projeto" name="txt-projeto" class="form-control" placeholder="Projeto" value="<?php echo set_value('txt-projeto') ?>">
+				  <label for="projeto">Projeto</label>
+				  <select class="form-control" id="projeto" name="projeto">
+				    <option>Estrutura de Dados I</option>
+				    <option>NTI - Microinformática</option>
+				  </select>
 				</div>
+
 				<div class="form-group">
 					<input type="password" id="txt-senha" name="txt-senha" class="form-control" placeholder="Senha">
 				</div>

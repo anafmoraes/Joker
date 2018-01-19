@@ -160,63 +160,87 @@
 		<div class="row">
 	        <div class="col-lg-12 text-center">
 	    	    <h1 class="section-heading">Progresso dos jogadores</h1>
-	            <hr class="primary"><br><br>
 	        </div>
 	        <div>
 				<div class="about-des">
-					<p align="justify">
-						<b>Boas vindas ao sistema, <?php  echo $this->session->userdata('userlogado')->nome;?>. </b> Nesta sessão você encontra o seu progresso ao longo dos ciclos da <i>Gamificação</i>. Esperamos que goste do plano gamificado planejado para o seu ambiente colaborativo. Divirta-se e fique de olho no seu progresso =)
+					
+						<div class="col-md-8"><p align="center"><b>Boas vindas ao sistema, <?php  echo $this->session->userdata('userlogado')->nome;?>. </b> Nesta sessão você encontra o seu progresso ao longo dos ciclos da <i>Gamificação</i>. Esperamos que goste do plano gamificado planejado para o seu ambiente colaborativo. Divirta-se e fique de olho no seu progresso =)</p></div>
 						<?php 
+
 	        			$id = $this->session->userdata('userlogado')->id;
 	        			$this->db->where('id_usuario', $id);
-				
 						$query = $this->db->get('ed1');
 						foreach ($query->result() as $row) {?> 
 
-						<h4>Ciclo 1 </h4> Total de moedas:
-						<?php echo $row->ciclo1; ?><br><?php
+						<div class="col-md-4" align="center"><h4> Moedas  dos ciclos</h4><br><?php
+							echo "Ciclo 1: " . $row->ciclo1;?> <br> <?php
+							echo "Ciclo 2: " . $row->ciclo2;?> <br> <?php
+							echo "Ciclo 3: " . $row->ciclo3;?>
+						</div>
+
+						<hr class="primary"><br><br>
+
+						<div class="col-lg-12"><br><br>
+						<h4 align ="center">Ciclo 1 </h4><br><?php
 						if ($row->ciclo1 >= '119') {
-							?><img src="<?php echo base_url('/images/nivel3.png');?>" width="800px" class="img-responsive" alt="Nível 3"><?php
+							?><img src="<?php echo base_url('/images/nivel3.svg');?>" class="img-responsive" alt="Nível 3"><?php
 						} elseif ($row->ciclo1 >='105') {
-							?><img src="<?php echo base_url('/images/nivel2.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
+							?><img src="<?php echo base_url('/images/nivel2.svg');?>" class="img-responsive" alt="Nível 2"><?php
 						}
 						elseif ($row->ciclo1 >= '84') {
-							?><img src="<?php echo base_url('/images/nivel1.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
+							?><img src="<?php echo base_url('/images/nivel1.svg');?>" class="img-responsive" alt="Nível 1"><?php
 						} else{
-							echo "Nível 0";
+							?><img src="<?php echo base_url('/images/nivel0.svg');?>" class="img-responsive" alt="Nível 0"><?php
 						}
 						?>
 
-						<h4>Ciclo 2 </h4> Total de moedas: 
-						<?php echo $row->ciclo2; ?><br><?php
+						<h4 align ="center">Ciclo 2 </h4> <br><?php
 						if ($row->ciclo2 >= '119') {
-							?><img src="<?php echo base_url('/images/nivel3.png');?>" width="800px" class="img-responsive" alt="Nível 3"><?php
+							?><img src="<?php echo base_url('/images/nivel3.svg');?>" class="img-responsive" alt="Nível 3"><?php
 						} elseif ($row->ciclo2 >='105') {
-							?><img src="<?php echo base_url('/images/nivel2.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
+							?><img src="<?php echo base_url('/images/nivel2.svg');?>" class="img-responsive" alt="Nível 2"><?php
 						}
 						elseif ($row->ciclo2 >= '84') {
-							?><img src="<?php echo base_url('/images/nivel1.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
+							?><img src="<?php echo base_url('/images/nivel1.svg');?>" class="img-responsive" alt="Nível 1"><?php
 						} else{
-							echo "Nível 0";
+							?><img src="<?php echo base_url('/images/nivel0.svg');?>" class="img-responsive" alt="Nível 0"><?php
 						}
 						?>
 
-						<h4>Ciclo 3 </h4> Total de moedas: 
-						<?php echo $row->ciclo3; ?><br><?php
+						<h4 align ="center">Ciclo 3 </h4> <br><?php
 						if ($row->ciclo3 >= '119') {
-							?><img src="<?php echo base_url('/images/nivel3.png');?>" width="800px" class="img-responsive" alt="Nível 3"><?php
+							?><img src="<?php echo base_url('/images/nivel3.svg');?>" lass="img-responsive" alt="Nível 3"><?php
 						} elseif ($row->ciclo3 >='105') {
-							?><img src="<?php echo base_url('/images/nivel2.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
+							?><img src="<?php echo base_url('/images/nivel2.svg');?>" class="img-responsive" alt="Nivel 2"><?php
 						}
 						elseif ($row->ciclo3 >= '84') {
-							?><img src="<?php echo base_url('/images/nivel1.png');?>" width="800px" class="img-responsive" alt="about img 1"><?php
+							?><img src="<?php echo base_url('/images/nivel1.svg');?>" class="img-responsive" alt="Nivel 1"><?php
 						} else{
-							echo "Nível 0";
+							?><img src="<?php echo base_url('/images/nivel0.svg');?>" class="img-responsive" alt="Nível 0"><?php
 						}
 						}
 						?>
-					</p>
+						</div>
 				</div>
 			</div>
 	    </div>
+	</section>
+
+	<section id="loja" class="paralla-section">
+		<div class="row">
+				<h1 class="section-heading" align="center">Loja</h1>
+				<div class="col-md-8 text-center">
+				<p>O plano gamificado conta com uma lojinha de recompensas. <br> Os itens mostrados aqui podem ser trocados pelas moedas acumuladas por você. <br> As moedas são acumulativas ao longo dos ciclos e intrasferíveis. <b> <br> A ação de compra não pode ser desfeita! Então fique atento as escolhas que fizer.</b></p>
+	        	</div>
+	        <div class="col-md-4">
+	        	<div class="changing-title"><h1>Seu Saldo é 100</h1></div>
+	        	<?php echo "Saldo de moedas: " . ($row->ciclo1 + $row->ciclo2 + $row->ciclo3);?></div>
+			<hr class="primary"><br><br>
+
+	        <div class="container">
+		        <div class="row">
+		          
+		        </div>
+		      </div>
+		</div>
 	</section>
