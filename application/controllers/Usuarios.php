@@ -10,10 +10,10 @@ class Usuarios extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('frontend/template/Html-header');
-		$this->load->view('frontend/Cadastro');
-		$this->load->view('frontend/template/Footer');
-		$this->load->view('frontend/template/Html-footer');
+		$this->load->view('frontend/template/html-header');
+		$this->load->view('frontend/login');
+		$this->load->view('frontend/template/footer');
+		$this->load->view('frontend/template/html-footer');
 	}
 
 	public function inserir(){
@@ -56,16 +56,16 @@ class Usuarios extends CI_Controller {
 	}
 
 	public function pag_cadastro(){
-		$this->load->view('frontend/template/Html-header');
-		$this->load->view('frontend/Cadastro');
-		$this->load->view('frontend/template/Html-footer');
+		$this->load->view('frontend/template/html-header');
+		$this->load->view('frontend/cadastro');
+		$this->load->view('frontend/template/html-footer');
 	}
 
 
 	public function pag_login(){
-		$this->load->view('frontend/template/Html-header');
-		$this->load->view('frontend/Login');
-		$this->load->view('frontend/template/Html-footer');
+		$this->load->view('frontend/template/html-header');
+		$this->load->view('frontend/login');
+		$this->load->view('frontend/template/html-footer');
 	}
 
 	public function login(){

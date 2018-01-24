@@ -11,5 +11,6 @@
 <script language="javascript" src="<?php echo base_url('assets/frontend/js/counter.js') ?>"></script>
 <script language="javascript" src="<?php echo base_url('assets/frontend/js/custom.js') ?>"></script>
 <script language="javascript" src="<?php echo base_url('assets/frontend/js/mail.js') ?>"></script>
+
 </body>
 </html>

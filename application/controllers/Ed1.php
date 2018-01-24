@@ -14,10 +14,10 @@ class Ed1 extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('frontend/template/Html-header');
-		$this->load->view('frontend/template/Header-ed1');	
-		$this->load->view('frontend/Ed1');
-		$this->load->view('frontend/template/Footer');
-		$this->load->view('frontend/template/Html-footer');
+		$this->load->view('frontend/template/html-header');
+		$this->load->view('frontend/template/header-ed1');	
+		$this->load->view('frontend/ed1');
+		$this->load->view('frontend/template/footer');
+		$this->load->view('frontend/template/html-footer');
 	}
 }
