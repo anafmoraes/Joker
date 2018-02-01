@@ -53,5 +53,5 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//$route['login'] = 'usuarios/pag_login';
-$route['cadastro'] = 'usuarios/pag_cadastro';
+$route['login'] = 'Usuarios/pag_login';
+$route['cadastro'] = 'Usuarios/pag_cadastro';

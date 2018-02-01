@@ -26,24 +26,26 @@ class Usuarios extends CI_Controller {
 		if($this->form_validation->run() == FALSE){
 			$this->index();
 		}else{
+						
 			$nome= $this->input->post('txt-nome');
 			$email= $this->input->post('txt-email');
 			$senha= $this->input->post('txt-senha');
 			$projeto= filter_input(INPUT_POST,"projeto",FILTER_SANITIZE_STRING);
-
 			$criptografia = base64_encode($senha);
-			if ($this->modelusuarios->adicionar($nome, $email, $projeto, $criptografia)) {
-				$id_usuario = $this->modelusuarios->recuperar_id($nome, $criptografia);
-				if ($projeto == "Estrutura de Dados I") {
-					$this->modelusuarios->preencher_ed1($id_usuario, 0, 0, 0);
-				}
-				//elseif ($projeto == "NTI - Microinformática"){
-				//	$this->modelusuarios->preencher_nti($id_usuario, 0, 0);
-				//}
-				redirect(base_url('login'));
-			}else{
-				echo "Houve um erro no sistema";
-			}
+
+			 if ($this->modelusuarios->adicionar($nome, $email, $projeto, $criptografia, $imagem)) {
+			 	$id_usuario = $this->modelusuarios->recuperar_id($nome, $criptografia);
+			 	if ($projeto == "Estrutura de Dados I") {
+			 		$this->modelusuarios->preencher_ed1($id_usuario, 0, 0, 0);
+					$this->modelusuarios->preencher_historioCompras($id_usuario);			 		
+			 	}
+			 	//elseif ($projeto == "NTI - Microinformática"){
+			 	//	$this->modelusuarios->preencher_nti($id_usuario, 0, 0);
+			 	//}
+			 	redirect(base_url('login'));
+			 }else{
+			 	echo "Houve um erro no sistema";
+			 }
 		}
 	}
 
@@ -114,5 +116,30 @@ class Usuarios extends CI_Controller {
 		$dadosSessao['logado'] = FALSE;
 		$this->session->set_userdata($dadosSessao);
 		redirect(base_url('login'));
+	}
+
+	public function comprar_item1($id){
+		if ($this->modelusuarios->adicionar_falta($id)){
+			redirect(base_url('ed1/progresso'));
+		}else{
+				echo "Houve um erro no sistema";
+		}
+		
+	}
+
+	public function comprar_item2($id){
+		if ($this->modelusuarios->adicionar_lista($id)){
+			redirect(base_url('ed1/progresso'));
+		}else{
+				echo "Houve um erro no sistema";
+		}
+	}
+
+	public function comprar_item3($id){
+		if ($this->modelusuarios->adicionar_ponto($id)){
+			redirect(base_url('ed1/progresso'));
+		}else{
+				echo "Houve um erro no sistema";
+		}
 	}
 }

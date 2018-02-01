@@ -22,6 +22,7 @@ class Usuarios_model extends CI_Model{
 		$dados['email']= $email;
 		$dados['projeto']= $projeto;
 		$dados['senha']= $senha;
+		//$dados['imagem']= $imagem;
 		return $this->db->insert('usuarios', $dados);
 	}
 
@@ -53,4 +54,34 @@ class Usuarios_model extends CI_Model{
 		$dados['saldo'] = $saldo;
 		return $this->db->insert('nti_usuarios', $dados);
 	}
+
+	public function adicionar_falta($id){
+		$this->db->set('faltas', 'faltas+1', FALSE);
+		$this->db->where('id_usuario', $id);
+		return $this->db->update('historico_compras');
+	}
+
+	public function adicionar_lista($id){
+		$this->db->set('listas', 'listas+1', FALSE);
+		$this->db->where('id_usuario', $id);
+		return $this->db->update('historico_compras');
+	}
+
+	public function adicionar_ponto($id){
+		$this->db->set('pontos', 'pontos+1', FALSE);
+		$this->db->where('id_usuario', $id);
+		return $this->db->update('historico_compras');
+	}
+
+	public function atualizarGasto($id, $faltas, $listas, $pontos){
+		$dado['total_gasto'] = ($faltas * 30) + ($listas * 60) + ($pontos * 80);
+		$this->db->where('id_usuario', $id);
+		return $this->db->update('historico_compras', $dado);
+	}
+	
+	public function preencher_historioCompras($id_usuario){
+		$dado['id_usuario'] = $id_usuario;
+		return $this->db->insert('historico_compras', $dado);
+	}
+
 }

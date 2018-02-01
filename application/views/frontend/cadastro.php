@@ -34,7 +34,11 @@
 				<div class="form-group">
 					<input type="password" id="txt-confir-senha" name="txt-confir-senha" class="form-control" placeholder="Confirmação de senha">
 				</div>
-				<button type="submit" class="btn btn-default">Cadastrar</button>
+
+				<label for="avatar">Imagem ou foto</label>
+				<input type="file" name="imagem"/>
+
+				<button type="submit" class="btn btn-default" value="upload" >Cadastrar</button>
 				<?php echo form_close(); ?>
 			</div>
 		</div>
