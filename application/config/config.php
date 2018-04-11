@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/Joker';
-//$config['base_url'] = 'http://cidreira.ufop.br/game/';
+//$config['base_url'] = 'http://california.ufop.br/~gamefica';
 
 /*
 |--------------------------------------------------------------------------

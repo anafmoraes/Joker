@@ -7,12 +7,11 @@ class Home extends CI_Controller {
 		parent::__construct();
 	}
 
-	public function index()
-	{
-		$this->load->view('frontend/template/html-header');
-		$this->load->view('frontend/template/header');	
-		$this->load->view('frontend/home');
-		$this->load->view('frontend/template/footer');
-		$this->load->view('frontend/template/html-footer');
+	public function index(){
+		$this->load->view('frontend/template/Html-header');
+		$this->load->view('frontend/template/Header');	
+		$this->load->view('frontend/Home');
+		$this->load->view('frontend/template/Footer');
+		$this->load->view('frontend/template/Html-footer');
 	}
 }

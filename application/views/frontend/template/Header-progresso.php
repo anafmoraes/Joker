@@ -12,12 +12,18 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right main-navigation">
-						<li><a href="<?php echo base_url('Ed1')?>" class="smoothScroll">INFORMAÇÕES BÁSICAS</a></li>
-						<li><a href="#progresso" class="smoothScroll">PROGRESSO</a></li>
-						<li><a href="#loja" class="smoothScroll">LOJA</a></li>
-						<li><a href="#itens" class="smoothScroll">MEUS ITENS</a></li>						
-						<li><a href="<?php echo base_url('usuarios/logout')?>" class="smoothScroll">LOGOUT</a></li>
-
+						<li><a href="<?php echo site_url('Ed1')?>" class="smoothScroll">INFORMAÇÕES BÁSICAS</a></li>
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PROGRESSO INDIVIDUAL<span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#progresso" class="smoothScroll">PROGRESSO DOS CICLOS</a></li>
+							<li><a href="#loja" class="smoothScroll">LOJA DE ITENS</a></li>
+							<li><a href="#itens" class="smoothScroll">ITENS COMPRADOS</a></li>
+				          </ul>
+				        </li>
+				        <li><a href="<?php echo site_url('Usuarios/perfil')?>" class="smoothScroll">MEU PERFIL</a></li>
+						<li><a href="<?php echo site_url('Usuarios/ranking')?>" class="smoothScroll">RANKING</a></li>
+						<li><a href="<?php echo site_url('Ed1/listas')?>" class="smoothScroll">LISTAS</a></li>
+						<li><a href="<?php echo site_url('Usuarios/logout')?>" class="smoothScroll">LOGOUT</a></li>
 					</ul>
 				</div>
 			</div>

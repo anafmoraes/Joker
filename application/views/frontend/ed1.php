@@ -10,7 +10,7 @@
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<div class="about-des">
-					<p align="justify">Os grupos serão compostos de até 3 jogadores. A cada novo ciclo o saldo de moedas é zerado para efeito de contagem. Contudo, moedas obtidas serão armazedas para cálculo do saldo final<br><br>
+					<p align="justify">Os grupos serão compostos de até 3 jogadores. Moedas acumuladas ao longo dos ciclos poderão ser usadas para compra de itens da Lojinha de primeiros socorros<br><br>
 					<b>Nota das atividades:</b><br>
 					* Maior ou igual a 7: 100% das moedas<br>
 					* Entre 5 e 7: 50% das moedas<br>
@@ -20,7 +20,7 @@
 		</div>
 	</section>
 
-	<section id="niveis" class="paralla-section">
+	<!--section id="niveis" class="paralla-section">
 		<div class="container">
 	        <div class="row">
 	          <div class="col-lg-12 text-center">
@@ -43,7 +43,7 @@
           </div>
           <div class="col-lg-4 col-md-6 text-center">
             <div class="service-box">
-              <img src="images/bateria2.png">
+              <img src="<?php echo base_url('/images/bateria2.png');?>">
               <h3>Nível II</h3>
               <p class="text-muted">(conquistou 75% das moedas distribuídas)<br> Benefícios: Eliminar a menor nota das listas práticas referente ao ciclo</p>
             </div>
@@ -57,7 +57,7 @@
           </div>
         </div>
       </div>
-	</section>
+	</section-->
 
 
 	<section id="ciclos" class="paralla-section">
@@ -65,7 +65,7 @@
 	        <div class="row">
 	          <div class="col-lg-12 text-center">
 	            <h1 class="section-heading">Ciclos</h1>
-	            <p>O plano gamificado aplicado à Estrutura de Dados I é dividido em três ciclos. Os níveis do jogo e as bonificações em moedas são iguais e se repetem para todos os ciclos. O saldo de moedas dos jogadores são zerados no início de cada ciclo para efeito de contagem. <br> A seguir o cronograma dos ciclos e a forma de distribuição de moedas:<br> <b>Ciclo 1: </b> 30 de outubro à 20 de novembro <br> <b>Ciclo 2: </b>22 de novembro à 13 de dezembro<br><b>Ciclo 3: </b> 18 de dezembro a 07 de fevereiro<br></p>
+	            <p>O plano gamificado aplicado à Estrutura de Dados I é dividido em três ciclos. Os níveis do jogo e as bonificações em moedas são iguais e se repetem para todos os ciclos. O saldo de moedas dos jogadores são zerados no início de cada ciclo para efeito de contagem. <br> A seguir o cronograma dos ciclos e a forma de distribuição de moedas:<br> <b>Ciclo 1: </b> Data em breve <br> <b>Ciclo 2: </b>Data em breve<br><b>Ciclo 3: </b> Data em breve<br></p>
 	            <hr class="primary"><br><br><br>
 	          </div>
 	        </div>
@@ -130,11 +130,11 @@
 	<section id="conquistas" class="paralla-section">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h1 class="section-heading">Conquistas do jogo</h1>
-				<p>O plano gamificado conta com duas conquistas ao final do jogo: <br> Um <strong>Certificado de distrição</strong>, que pode ser conquistado de forma individual<br> e um <strong>Happy Hour</strong>, que é conquistado de forma coletiva com o grupo de cada jogador.<br> Para usufluir da conquista, o jogador deve se atentar ao pré-requisito descrito à seguir.</p>
+				<h1 class="section-heading">Premiações do jogo</h1>
+				<p>O plano gamificado contará com premiações ao final do jogo <br> <strong>Em breve divulgaremos mais detalhes. Fique de olho</strong></p>
 				<hr class="primary">
 	        </div>
-	        <div class="container">
+	        <!--div class="container">
 		        <div class="row">
 		          <div class="col-lg-6 text-center">
 		            <div class="service-box">
@@ -151,7 +151,7 @@
 		            </div>
 		          </div>
 		        </div>
-		      </div>
+		      </div-->
 		</div>
 	</section>
 

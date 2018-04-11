@@ -8,12 +8,14 @@
                 <div class="templatemo-login-form">
                     <?php  
                         echo validation_errors('<div class="alert alert-danger">','</div>');
-                        echo form_open('usuarios/login');
+                        echo form_open('Usuarios/login');
 
                     ?>
                     <fieldset>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Usuário" name="txt-user" type="text" autofocus>
+                        <div id="email">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="txt-email" name="txt-email" placeholder="Email">
+                            </div>
                         </div>
                         <div class="form-group">
                             <input class="form-control" placeholder="Senha" name="txt-senha" type="password" value="">
@@ -22,7 +24,7 @@
                     </fieldset>
                     <?php echo form_close();?>
                     <div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
-                        <p>Ainda não tem registro? <strong><a href=<?php echo base_url('cadastro')?> class="blue-text">Cadastre-se agora!</a></strong></p>
+                        <p>Ainda não tem registro? <strong><a href=<?php echo site_url('cadastro')?> class="blue-text">Cadastre-se agora!</a></strong></p>
                     </div>
                 </div>
         </div>

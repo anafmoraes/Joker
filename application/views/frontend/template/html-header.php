@@ -17,6 +17,7 @@
    	<link rel="stylesheet" href="<?php echo base_url('assets/frontend/css/owl.theme.css')?>">
 	<link rel="stylesheet" href="<?php echo base_url('assets/frontend/css/owl.carousel.css')?>">
 	<link rel="stylesheet" href="<?php echo base_url('assets/frontend/css/style.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/frontend/css/circle.css')?>">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>

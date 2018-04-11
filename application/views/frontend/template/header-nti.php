@@ -10,13 +10,11 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right main-navigation">
-					<li><a href="#plano" class="smoothScroll">PLANO GAMIFICADO</a></li>
-					<li><a href="#elementos" class="smoothScroll">ELEMENTOS DE JOGOS</a></li>
-					<li><a href="#missoes" class="smoothScroll">MISSÕES</a></li>
-					<li><a href="#pontos" class="smoothScroll">PONTOS</a></li>
-					<li><a href="#conquistas" class="smoothScroll">CONQUISTAS</a></li>
-					<li><a href="#progresso" class="smoothScroll">PROGRESSO</a></li>
-					<li><a href="<?php echo base_url('usuarios/logout')?>" class="smoothScroll">LOGOUT</a></li>
+					<li><a href="<?php echo site_url('NTI')?>" class="smoothScroll">PLANO GAMIFICADO</a></li>
+					<li><a href="<?php echo site_url('glpi')?>" class="smoothScroll">GUIA GLPI</a></li><li><a href="<?php echo site_url('time')?>" class="smoothScroll">PROGRESSO DO TIME</a></li>
+					<li><a href="<?php echo site_url('individual')?>" class="smoothScroll">MEU PROGRESSO</a></li>
+					<li><a href="<?php echo site_url('perfil')?>" class="smoothScroll">MEU PERFIL</a></li>
+					<li><a href="<?php echo site_url('logout')?>" class="smoothScroll">LOGOUT</a></li>
 				</ul>
 			</div>
 		</div>

@@ -75,9 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	//'hostname' => '127.0.0.1',
-	//'username' => 'joker',
-	//'password' => 'joNti@Ker@53',
+	//'hostname' => 'california.ufop.br',
+	//'username' => 'gamefica',
+	//'password' => 'SNdWC2XO',
+	//'database' => 'gamefica_gamefica',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',

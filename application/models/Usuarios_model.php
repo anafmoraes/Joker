@@ -17,27 +17,19 @@ class Usuarios_model extends CI_Model{
 
 	}
 
-	public function adicionar($nome, $email, $projeto, $senha){
+	public function adicionar($nome, $email, $projeto, $senha, $nickname){
 		$dados['nome']= $nome;
 		$dados['email']= $email;
 		$dados['projeto']= $projeto;
 		$dados['senha']= $senha;
-		//$dados['imagem']= $imagem;
+		$dados['nickname']= $nickname;
+		$dados['avatar']= rand(1, 36);
 		return $this->db->insert('usuarios', $dados);
 	}
 
 	public function excluir($id){
 		$this->db->where('id', $id);
 		return $this->db->delete('usuarios');
-	}
-
-	public function recuperar_id($usuario, $criptografia){
-		$this->db->where('nome', $usuario);
-		$this->db->where('senha', $criptografia);
-		$query = $this->db->get('usuarios');
-			foreach ($query->result() as $row){
-				return $row->id;
-			}
 	}
 
 	public function preencher_ed1($id_usuario, $ciclo1, $ciclo2, $ciclo3){
@@ -74,7 +66,7 @@ class Usuarios_model extends CI_Model{
 	}
 
 	public function atualizarGasto($id, $faltas, $listas, $pontos){
-		$dado['total_gasto'] = ($faltas * 30) + ($listas * 60) + ($pontos * 80);
+		$dado['total_gasto'] = ($faltas * 30) + ($listas * 60) + ($pontos * 125);
 		$this->db->where('id_usuario', $id);
 		return $this->db->update('historico_compras', $dado);
 	}
@@ -82,6 +74,15 @@ class Usuarios_model extends CI_Model{
 	public function preencher_historioCompras($id_usuario){
 		$dado['id_usuario'] = $id_usuario;
 		return $this->db->insert('historico_compras', $dado);
+	}
+
+	public function atualizar($nome, $email, $senha, $nick, $id){
+		$dados['nome']= $nome;
+		$dados['email']= $email;
+		$dados['senha']= $senha;
+		$dados['nickname']= $nick;
+		$this->db->where('id', $id);
+		return $this->db->update('usuarios', $dados);
 	}
 
 }

@@ -8,7 +8,7 @@ class Ed1 extends CI_Controller {
 
 		$this->load->model('usuarios_model', 'modelusuarios');
 		if(!$this->session->userdata('logado')){
-			redirect(base_url('login'));
+			redirect(site_url('login'));
 		}
 	}
 
@@ -22,11 +22,11 @@ class Ed1 extends CI_Controller {
 			$pontos = $row->pontos;
 		}
 		if ($this->modelusuarios->atualizarGasto($id, $faltas, $listas, $pontos)) {
-			$this->load->view('frontend/template/html-header');
-			$this->load->view('frontend/template/header-ed1');	
-			$this->load->view('frontend/ed1');
-			$this->load->view('frontend/template/footer');
-			$this->load->view('frontend/template/html-footer');
+			$this->load->view('frontend/template/Html-header');
+			$this->load->view('frontend/template/Header-ed1');	
+			$this->load->view('frontend/Ed1');
+			$this->load->view('frontend/template/Footer');
+			$this->load->view('frontend/template/Html-footer');
 		}else{
 			echo "Houve um erro no sistema";
 		}
@@ -42,13 +42,21 @@ class Ed1 extends CI_Controller {
 			$pontos = $row->pontos;
 		}
 		if ($this->modelusuarios->atualizarGasto($id, $faltas, $listas, $pontos)) {
-			$this->load->view('frontend/template/html-header');
-			$this->load->view('frontend/template/header-progresso');	
-			$this->load->view('frontend/progresso');
-			$this->load->view('frontend/template/footer');
-			$this->load->view('frontend/template/html-footer');
+			$this->load->view('frontend/template/Html-header');
+			$this->load->view('frontend/template/Header-progresso');	
+			$this->load->view('frontend/Progresso');
+			$this->load->view('frontend/template/Footer');
+			$this->load->view('frontend/template/Html-footer');
 		}else{
 			echo "Houve um erro no sistema";
 		}
+	}
+
+	public function listas(){
+		$this->load->view('frontend/template/Html-header');
+		$this->load->view('frontend/template/Header-ed1');	
+		$this->load->view('frontend/Listas');
+		$this->load->view('frontend/template/Footer');
+		$this->load->view('frontend/template/Html-footer');
 	}
 }

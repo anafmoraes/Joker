@@ -1,116 +1,59 @@
-<!DOCTYPE html>
-	<html class="no-js">
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Meu Perfil</title>
-	<link rel="shortcut icon" href="images/joker-face.png"/>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FreeHTML5.co" />
+<div class="container"><br><br>
+	<h1>Sistema Gamificado - Joker</h1>
+	<div class="row">
+		<div class="col-md-8">    
+            <h2>Loja</h2>
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+                <div class="table-responsive"><table class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+	                    <th>Jogador</th>
+	                    <th>Email</th>
+	                    <th>Itens comprados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+	        			$this->db->order_by('nome', 'ASC');
+						$this->db->select('*');
+						$this->db->from('historico_compras');
+						$this->db->where('projeto', "Estrutura de Dados I");
+						$this->db->join('usuarios', 'usuarios.id = historico_compras.id_usuario');
+						$query = $this->db->get();
+						foreach ($query->result() as $row) {
+						?>
+                        <tr>
+                        	<th>
+                        	<?php echo $row->nome;?>
+                        	</th>
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+                        	<td>
+                        	<?php echo $row->email;?>
+                        	</td>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+                        	<td>
+                        		<?php
+                        		if ($row->faltas != 0){
+                        			echo "Abono de ". $row->faltas . " faltas";
+                        		}?> <br> <?php
 
-	</head>
-	<body>
-	<div id="fh5co-page">
-		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+                        		if ($row->listas != 0){
+                        			echo "Eliminação de ". $row->listas . " notas de prática";
+                        		} ?> <br> <?php
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="images/image jo.png" width="128" alt="Free HTML5 Bootstrap Website Template"></a></h1>
-			<nav id="fh5co-main-menu" role="navigation">
-				<ul>
-					<li class="fh5co-active"><a href="index.html">HOME</a></li>
-					<li><a href="aeds.html">AEDS I</a></li>
-					<li><a href="nti.html">NTI</a></li>
-				</ul>
-			</nav>
+                        		if ($row->pontos != 0){
+                        			echo "Acréscimo de  ". $row->pontos . " pontos";
+                        		}
 
-			<div class="fh5co-footer">
-				<p><small>&copy; 2018 Joker - Gamification UFOP. All Rights Reserved. Designed by Ana Moraes e Suzan Gomes</small></p>
-			</div>
 
-		</aside>
-
-		<div id="fh5co-main">
-
-			
-			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Sistema de Pontos <span>Joker</span></h2>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="icon-strategy"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>Gamificação</h3>
-								<p>Gamificação é o uso de mecânicas e dinâmicas de jogos para engajar pessoas, resolver problemas e melhorar o aprendizado, motivando ações e comportamentos em ambientes fora do contexto de jogos.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
-							<div class="fh5co-icon">
-								<i class="icon-tablet2"></i>
-							</div>
-							<div class="fh5co-text">
-								<h3>Pontuação</h3>
-								<p>De acordo com cada metodologia gamificada a pontuação deverá ser lançada. Selecione o grupo no menu lateral para que os usuários sejam exibidos.</p>
-							</div>
-						</div>
-					</div>
-
+                        		?>
+                        	</td>
+                        </tr>
+                        <?php } ?>
+                      </tbody>
+                    </table>    
+                  </div>
 				</div>
-			</div>
-			
-		</div>
 	</div>
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
-
-	</body>
-</html>
+    
+</div>

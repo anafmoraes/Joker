@@ -6,7 +6,7 @@
 				<hr class="primary"><br><br>
 	        </div>
 			<div class="col-md-6 col-sm-12">
-				<img src="images/problema.jpg" class="img-responsive" alt="about img 1">
+				<img src="<?php echo base_url('images/problema.jpg')?>" class="img-responsive" alt="about img 1">
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<div class="about-des">
@@ -20,83 +20,6 @@
 					</p>
 				</div>
 			</div>
-		</div>
-	</section>
-	
-	<section id="elementos" class="paralla-section">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h1 class="section-heading"><br>Elementos</h1>
-				<hr class="primary"><br><br>
-	        </div>
-      	<div class="container">
-	        <div class="row">
-	          <div class="col-lg-3 text-center">
-	            <div class="service-box">
-	              <img src="images/competicao.jpg" width="200px">
-	          </div>
-	          </div>
-	          <div class="col-lg-3 text-center">
-	            <div class="service-box">
-	              <img src="images/conquista.jpg" width="200px">
-	          	</div>
-	          </div>
-	          <div class="col-lg-3 text-center">
-	            <div class="service-box">
-	              <img src="images/cooperação.png" width="200px">
-	             </div>
-	          </div>
-	          <div class="col-lg-3 text-center">
-	            <div class="service-box">
-	              <img src="images/desafios.png" width="200px">
-	             </div>
-	          </div>
-	        </div>
-      </div><br>
-      <div class="container">
-		<div class="row">
-		  <div class="col-lg-3 text-center">
-			<div class="service-box">
-			  <img src="images/feedback.png" width="200px">
-		  </div>
-		  </div>
-		  <div class="col-lg-3 text-center">
-			<div class="service-box">
-			  <img src="images/chefe.png" width="200px">
-			</div>
-		  </div>
-		  <div class="col-lg-3 text-center">
-			<div class="service-box">
-			  <img src="images/progress.png" width="200px">
-			 </div>
-		  </div>
-		  <div class="col-lg-3 text-center">
-			<div class="service-box">
-			  <img src="images/point.png" width="200px">
-			 </div>
-		  </div>
-		</div>
-      </div><br>
-      <div class="container">
-		<div class="row">
-		  <div class="col-lg-4 text-center">
-			<div class="service-box">
-			  <img src="images/progressão.png" width="200px">
-		  </div>
-		  </div>
-		  <div class="col-lg-4 text-center">
-			<div class="service-box">
-			  <img src="images/relacionamento.png" width="200px">
-			</div>
-		  </div>
-		  <div class="col-lg-4 text-center">
-			<div class="service-box">
-			  <img src="images/restrição.png" width="200px">
-			 </div>
-		  </div>
-		</div>
-      </div>
-      
 		</div>
 	</section>
 
@@ -115,22 +38,22 @@
 	        <div class="row">
 	          <div class="col-lg-3 text-center">
 	            <div class="service-box">
-	              <img src="images/cartaoA.png" width="200px">
+	              <img src="<?php echo base_url('images/cartaoA.png')?>" width="200px">
 	          </div>
 	          </div>
 	          <div class="col-lg-3 text-center">
 	            <div class="service-box">
-	              <img src="images/cartaoB.png" width="200px">
+	              <img src="<?php echo base_url('images/cartaoB.png')?>" width="200px">
 	          	</div>
 	          </div>
 	          <div class="col-lg-3 text-center">
 	            <div class="service-box">
-	              <img src="images/cartaoC.png" width="200px">
+	              <img src="<?php echo base_url('images/cartaoC.png')?>" width="200px">
 	             </div>
 	          </div>
 	          <div class="col-lg-3 text-center">
 	            <div class="service-box">
-	              <img src="images/cartaoD.png" width="200px">
+	              <img src="<?php echo base_url('images/cartaoD.png')?>" width="200px">
 	          </div>
 	          </div>
 	        </div>
@@ -186,20 +109,20 @@
 	        <div class="container">
          			<div class="col-lg-4 col-md-6 text-center">
             			<div class="service-box">
-             				 <img src="images/one.svg " width="100px">
+            				<img src="<?php echo base_url('images/one.svg')?>" width="100px">
               				<p class="text-muted">Condição: ultrapassar 50 pontos e ter, no mínimo, 3 chamados <br>Bonificação: R$20 + 1h de liberação
               				</p>
             			</div>
           			</div>
 		        	<div class="col-lg-4 col-md-6 text-center">
 		            	<div class="service-box">
-			              <img src="images/two.svg" width="100px">
+			              <img src="<?php echo base_url('images/two.svg')?>" width="100px">
 			              <p class="text-muted"> Condição: ultrapassar 65 pontos e ter, no mínimo, 5 chamados<br>Bonificação: R$20 + 2h de liberação</p>
 		            	</div>
 		         	</div>
 		        	<div class="col-lg-4 col-md-6 text-center">
 		            	<div class="service-box">
-		              		<img src="images/three.svg" width="100px">
+		              		<img src="<?php echo base_url('images/three.svg')?>" width="100px">
 				            <p class="text-muted"> Condição: ultrapassar 75 pontos e ter, no mínimo, 7 chamados<br>Bonificação: R$30 + 3h de liberação</p>
 		            	</div>
 		          	</div>
@@ -208,19 +131,19 @@
 	        <div class="container">
          			<div class="col-lg-4 col-md-6 text-center">
             			<div class="service-box">
-             				 <img src="images/four.svg" width="100px">
+             				<img src="<?php echo base_url('images/four.svg')?>" width="100px">
               				<p class="text-muted">Condição: ultrapassar 85 pontos e ter, no mínimo, 10 chamados<br>Bonificação: R$30 + 4h de liberação</p>
             			</div>
           			</div>
 		        	<div class="col-lg-4 col-md-6 text-center">
 		            	<div class="service-box">
-			              <img src="images/five.svg" width="100px">
+			              <img src="<?php echo base_url('images/five.svg')?>" width="100px">
 			              <p class="text-muted">Condição: ultrapassar 100 pontos e ter, no mínimo, 12 chamados<br>Bonificação: R$40 + 5h de liberação</p>
 		            	</div>
 		         	</div>
 		        	<div class="col-lg-4 col-md-6 text-center">
 		            	<div class="service-box">
-		              		<img src="images/six.svg" width="100px">
+		              		<img src="<?php echo base_url('images/six.svg')?>" width="100px">
 				            <p class="text-muted">Condição: ultrapassar 120 pontos e ter completado 80% das horas no ciclo anterior<br>Bonificação: R$60 + 6h de liberação</p>
 		            	</div>
 		          	</div>
@@ -229,97 +152,32 @@
       		<div class="container">
          			<div class="col-lg-4 col-md-6 text-center">
             			<div class="service-box">
-             				 <img src="images/seven.svg" width="100px">
+             				<img src="<?php echo base_url('images/seven.svg')?>" width="100px">
               				<p class="text-muted">Condição: ultrapassar 130 pontos e 100% de presença nas reuniões<br>Bonificação: R$70 + 7h de liberação</p>
             			</div>
           			</div>
 		        	<div class="col-lg-4 col-md-6 text-center">
 		            	<div class="service-box">
-			              <img src="images/eight.svg" width="100px">
+			              <img src="<?php echo base_url('images/eight.svg')?>" width="100px">
 			              <p class="text-muted">Condição: ultrapassar 150 pontos e ter feito 100 pontos no ciclo anterior<br>Bonificação: R$80 + 8h de liberação</p>
 		            	</div>
 		         	</div>
 		        	<div class="col-lg-4 col-md-6 text-center">
 		            	<div class="service-box">
-		              		<img src="images/nine.svg" width="100px">
+		              		<img src="<?php echo base_url('images/nine.svg')?>" width="100px">
 				            <p class="text-muted">Condição: ultrapassar 200 pontos e ter 95% horas ciclo anterior<br>Bonificação: R$90 + 9h de liberação</p>
 		            	</div>
 		          	</div>
       		</div>
       		<br><br><br>
       		<div class="container">
+      				<div class="col-lg-4 col-md-6 text-center"></div>
          			<div class="col-lg-4 col-md-6 text-center">
             			<div class="service-box">
-             				 <img src="images/ten.svg" width="100px">
+             				<img src="<?php echo base_url('images/ten.svg')?>" width="100px">
               				<p class="text-muted">Condição: ultrapassar 250 pontos<br>Bonificação: R$100  + 10h de liberação</p>
             			</div>
           			</div>
       		</div>
 		</div>
-	</section>
-
-<section id="progresso" class="paralla-section">
-		<div class="row">
-	        <div class="col-lg-12 text-center">
-	    	    <h1 class="section-heading"><br>Progresso dos jogadores</h1>
-	            <hr class="primary"><br><br><br>
-	        </div>
-	        <div class="col-md-6 col-sm-12">
-	        	<img src="<?php echo base_url('/images/progresso.png');?>" class="img-responsive" alt="about img 1">
-	        </div>
-	        <div class="col-md-6">
-				<div class="about-des">
-					<p align="justify">
-						<b>Boas vindas ao sistema, <?php  echo $this->session->userdata('userlogado')->nome;?>. </b> Nesta sessão você encontra o seu progresso ao longo dos ciclos da <i>Gamificação</i>. Esperamos que goste do plano gamificado planejado para o seu ambiente colaborativo. Divirta-se e fique de olho no seu progresso =)
-						<?php 
-	        			$id = $this->session->userdata('userlogado')->id;
-	        			$this->db->where('id_usuario', $id);
-						$query = $this->db->get('nti_usuarios');
-						foreach ($query->result() as $row) {?> <br><strong>
-							<?php echo "Pontuação do mês de ". $row->mes . ": ". $row->pontuacao;?>
-							<br></strong>
-							<?php
-							if ($row->pontuacao >= '250'){
-								echo "Bonificação R$100 + 10h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '200') {
-								echo "Bonificação: R$90 + 9h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '150') {
-								echo "Bonificação: R$80 + 8h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '130') {
-								echo "Bonificação: R$70 + 7h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '120') {
-								echo "Bonificação: R$60 + 6h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '100') {
-								echo "Bonificação: R$40 + 5h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '85' and $row->quant_chamados >= '10') {
-								echo "Bonificação: R$30 + 4h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '75' and $row->quant_chamados >= '7') {
-								echo "Bonificação: R$30 + 3h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '65' and $row->quant_chamados >= '5') {
-								echo "Bonificação: R$20 + 2h de liberação";
-							}
-
-							elseif ($row->pontuacao >= '50' and $row->quant_chamados >= '3')
-								echo "Bonificação: R$20 + 1h de liberação";						
-						}?>
-					</p>
-				</div>
-			</div>
-	    </div>
 	</section>

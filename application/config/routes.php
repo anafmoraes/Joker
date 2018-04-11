@@ -55,3 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Usuarios/pag_login';
 $route['cadastro'] = 'Usuarios/pag_cadastro';
+$route['glpi'] = 'Nti/glpi';
+$route['time'] = 'Nti/progresso_time';
+$route['individual'] = 'Nti/progresso_individual';
+$route['perfil'] = 'Nti/perfil';
+$route['logout'] = 'Usuarios/logout';

@@ -18,7 +18,7 @@
 				<li><a href="#projetos" class="smoothScroll">PROJETOS</a></li> 
                 <li><a href="#testimonial" class="smoothScroll">EQUIPE</a></li>
 				<li><a href="#contact" class="smoothScroll">CONTATO</a></li>
-				<li><a href="<?php echo base_url('login')?>" target="_blank" class="smoothScroll">LOGIN</a></li>
+				<li><a href="<?php echo site_url('login')?>" target="_blank" class="smoothScroll">LOGIN</a></li>
 			</ul>
 		</div>
 
